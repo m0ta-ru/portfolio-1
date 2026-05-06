@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.105",
-    "@iconify-json/simple-icons": "^1.2.80",
+    "@iconify-json/simple-icons": "^1.2.81",
     "@nuxt/content": "^3.13.0",
     "@nuxt/image": "^2.0.0",
     "@nuxt/ui": "^4.7.1",
@@ -30,5 +30,5 @@
     "typescript": "^6.0.3",
     "vue-tsc": "^3.2.8"
   },
-  "packageManager": "pnpm@10.33.2"
+  "packageManager": "pnpm@10.33.4"
 }
