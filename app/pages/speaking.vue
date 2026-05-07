@@ -57,11 +57,11 @@ function formatDate(dateString: string): string {
       }"
     >
       <template #links>
-        <UButton
+        <!-- <UButton
           v-if="page.links"
           :to="`mailto:${global.email}`"
           v-bind="page.links[0]"
-        />
+        /> -->
       </template>
     </UPageHero>
     <UPageSection

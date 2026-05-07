@@ -27,10 +27,12 @@ useSeoMeta({
       }"
     >
       <LandingAbout :page />
-      <LandingWorkExperience :page />
+      <LandingTimeLine :page />
+      <!-- <LandingWorkExperience :page /> -->
     </UPageSection>
     <LandingBlog :page />
-    <LandingTestimonials :page />
-    <LandingFAQ :page />
+    <LandingMemoryLight :page />
+    <!-- <LandingTestimonials :page /> -->
+    <!-- <LandingFAQ :page /> -->
   </UPage>
 </template>

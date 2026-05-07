@@ -1,0 +1,11 @@
+title: Земной путь
+description: Яркий и насыщенный жизненный путь
+# links:
+#   - label: "Let's talk"
+#     color: "neutral"
+#   - label: 'Email me'
+milestones:
+  - date: "1979"
+    title: "Title"
+    description: "Note description"
+

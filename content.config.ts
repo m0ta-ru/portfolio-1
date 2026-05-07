@@ -33,6 +33,10 @@ const createTestimonialSchema = () => z.object({
   quote: z.string(),
   author: createAuthorSchema()
 })
+const createMemoryLightSchema = () => z.object({
+  quote: z.string(),
+  author: createAuthorSchema()
+})
 
 export default defineContentConfig({
   collections: {
@@ -48,6 +52,7 @@ export default defineContentConfig({
         experience: createBaseSchema().extend({
           items: z.array(z.object({
             date: z.date(),
+            text: z.string(),
             position: z.string(),
             company: z.object({
               name: z.string(),
@@ -58,6 +63,7 @@ export default defineContentConfig({
           }))
         }),
         testimonials: z.array(createTestimonialSchema()),
+        memorylight: z.array(createMemoryLightSchema()),
         blog: createBaseSchema(),
         faq: createBaseSchema().extend({
           categories: z.array(
@@ -71,6 +77,18 @@ export default defineContentConfig({
               )
             }))
         })
+      })
+    }),
+    lifeline: defineCollection({
+      type: 'data',
+      source: 'lifeline/*.yml',
+      schema: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        image: z.string().nonempty().editor({ input: 'media' }),
+        url: z.string().nonempty(),
+        tags: z.array(z.string()),
+        date: z.date()
       })
     }),
     projects: defineCollection({
@@ -98,6 +116,7 @@ export default defineContentConfig({
     pages: defineCollection({
       type: 'page',
       source: [
+        { include: 'lifeline.yml' },
         { include: 'projects.yml' },
         { include: 'blog.yml' }
       ],
